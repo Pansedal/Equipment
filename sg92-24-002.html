@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SG92-24 Details</title><style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f6f8;color:#111827}
+header{background:#111827;color:white;text-align:center;padding:24px 16px}
+header h1{margin:0 0 6px;font-size:30px}
+header p{margin:0;color:#d1d5db}
+main{max-width:980px;margin:auto;padding:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:white;border-radius:16px;box-shadow:0 4px 14px rgba(0,0,0,.08);overflow:hidden;text-decoration:none;color:inherit;display:block}
+.card img{width:100%;height:210px;object-fit:contain;background:white;padding:14px;border-bottom:1px solid #e5e7eb}
+.card div{padding:14px}
+.card h2{font-size:18px;margin:0 0 8px}
+.card p{margin:5px 0;color:#374151}
+.page-card{background:white;border-radius:16px;box-shadow:0 4px 14px rgba(0,0,0,.08);padding:18px;margin:16px 0}
+.product-photo{width:100%;max-height:380px;object-fit:contain;border:1px solid #e5e7eb;border-radius:14px;background:white;padding:14px}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{text-align:left;padding:12px;border-bottom:1px solid #e5e7eb;vertical-align:top}
+th{width:180px;background:#f9fafb}
+.btn{display:inline-block;background:#2563eb;color:white;padding:10px 14px;border-radius:10px;text-decoration:none;margin-bottom:10px}
+.section-title{font-size:24px;margin:10px 0 16px}
+</style>
+<script>
+function nextImage(img){
+  const list = JSON.parse(img.dataset.sources);
+  let index = parseInt(img.dataset.index || "0");
+  index++;
+  if(index < list.length){
+    img.dataset.index = index;
+    img.src = list[index];
+  } else {
+    img.onerror = null;
+    img.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(`
+      <svg xmlns="http://www.w3.org/2000/svg" width="900" height="500">
+        <rect width="100%" height="100%" fill="#f8fafc"/>
+        <rect x="70" y="130" width="760" height="190" rx="24" fill="#e5e7eb"/>
+        <text x="450" y="230" text-anchor="middle" font-family="Arial" font-size="34" fill="#111827">Product Photo</text>
+        <text x="450" y="275" text-anchor="middle" font-family="Arial" font-size="24" fill="#64748b">Image source unavailable</text>
+      </svg>`);
+  }
+}
+</script>
+</head>
+<body>
+<header><h1>Compact 24-Port Gigabit Switch</h1><p>SG92-24</p></header>
+<main>
+<a class="btn" href="index.html">← Back</a>
+<section class="page-card">
+<img class="product-photo" src="https://tse1.mm.bing.net/th?q=Cisco%20SG92-24%20Compact%2024-Port%20Gigabit%20Switch&amp;w=700&amp;h=500" data-sources="[&quot;https://tse1.mm.bing.net/th?q=Cisco%20SG92-24%20Compact%2024-Port%20Gigabit%20Switch&amp;w=700&amp;h=500&quot;, &quot;https://tse2.mm.bing.net/th?q=Cisco%20SG92-24%20Gigabit%20Switch%20product&amp;w=700&amp;h=500&quot;, &quot;https://m.media-amazon.com/images/I/61P9DhczgHL._AC_SL1500_.jpg&quot;]" data-index="0" onerror="nextImage(this)" alt="SG92-24 product photo">
+</section>
+<section class="page-card">
+<h2>Product Details</h2>
+<table><tr><th>Product</th><td>Compact 24-Port Gigabit Switch</td></tr><tr><th>Brand</th><td>Cisco</td></tr><tr><th>Model</th><td>SG92-24</td></tr><tr><th>Serial Number</th><td>PSZ18521NR0</td></tr><tr><th>MAC Address</th><td>Not shown</td></tr><tr><th>Version / PID VID</th><td>SG92-24 V01</td></tr><tr><th>Notes</th><td>Compact 24-port Gigabit switch</td></tr></table>
+</section>
+</main>
+</body></html>
